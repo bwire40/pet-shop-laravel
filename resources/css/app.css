@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -45,7 +44,7 @@
 .work-sans {
     font-family: 'Work Sans', sans-serif;
 }
-
+        
 #menu-toggle:checked + #menu {
     display: block;
 }

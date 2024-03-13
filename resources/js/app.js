@@ -15,6 +15,6 @@ window.addEventListener("load", () => {
     const delayTime = 0;
     setTimeout(function () {
         content.classList.remove("hidden");
-        loader.classList.add("hidden");
+        loader.classList.add("loader-hidden");
     }, delayTime);
 });
