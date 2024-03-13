@@ -15,8 +15,7 @@
     <!-- Scripts -->
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@0.7.4/dist/tailwind.min.css" rel="stylesheet">
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/cc31d88ebe.js" crossorigin="anonymous"></script>
 </head>
 
