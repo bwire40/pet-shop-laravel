@@ -40,20 +40,17 @@
             <div>
                 <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white mt-6">
                     Founded</p>
-                <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6">It is a long established
-                    fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6">2023</p>
             </div>
             <div>
-                <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white mt-6">50M
+                <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white mt-6">100K
                     montly enrichments</p>
-                <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6">It is a long established
-                    fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6"></p>
             </div>
             <div class="sm:block hidden">
                 <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white mt-6">400k
-                    User</p>
-                <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6">It is a long established
-                    fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    Users</p>
+
             </div>
         </div>
         <div class="sm:hidden block relative mt-8">
@@ -97,9 +94,8 @@
                             <p
                                 class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white">
                                 Team</p>
-                            <p class="mt-2 font-normal text-base leading-6 text-gray-600 dark:text-gray-200">It is a long
-                                established fact that a reader will be distracted by the readable content of a page when
-                                looking at its layout.</p>
+                            <p class="mt-2 font-normal text-base leading-6 text-gray-600 dark:text-gray-200">Team work
+                                invested</p>
                         </div>
                     </div>
 
@@ -112,9 +108,7 @@
                             <p
                                 class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white">
                                 Board</p>
-                            <p class="mt-2 font-normal text-base leading-6 text-gray-600 dark:text-gray-200">It is a long
-                                established fact that a reader will be distracted by the readable content of a page when
-                                looking at its layout.</p>
+                            <p class="mt-2 font-normal text-base leading-6 text-gray-600 dark:text-gray-200">5 members</p>
                         </div>
                     </div>
 
@@ -127,9 +121,8 @@
                             <p
                                 class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white">
                                 Press</p>
-                            <p class="mt-2 font-normal text-base leading-6 text-gray-600 dark:text-gray-200">It is a long
-                                established fact that a reader will be distracted by the readable content of a page when
-                                looking at its layout.</p>
+                            <p class="mt-2 font-normal text-base leading-6 text-gray-600 dark:text-gray-200">Regular
+                                conferences</p>
                         </div>
                     </div>
                 </div>
