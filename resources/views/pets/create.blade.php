@@ -47,9 +47,8 @@
                         <div>
                             <label for="breed"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Breed</label>
-                            <select id="breed" name="breed"
+                            <select name="breed"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                <option selected="">Select breed</option>
                                 @foreach ($breeds as $breed)
                                     <option selected="{{ $breed->name }}">{{ $breed->name }}</option>
                                 @endforeach
@@ -62,13 +61,9 @@
                         <div>
                             <label for="category"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
-                            <select id="category" name="category"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                <option selected="">Select category</option>
-                                @foreach ($categories as $category)
-                                    <option selected="{{ $category->name }}">{{ $category->name }}</option>
-                                @endforeach
-                            </select>
+
+                            <input type="text" name="category" id="category" value="{{ $breed->category }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             @error('category')
                                 <p class="text-red-500 text-sm">{{ $message }}</p>
                             @enderror

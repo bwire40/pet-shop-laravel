@@ -21,9 +21,19 @@ class PetCategoryController extends Controller
      */
     public function create()
     {
+
+        // search box
+        // check if there is a search
+        // chek serach value with our db
+        $categories = PetCategory::all();
+
+        if (request()->has('search')) {
+            // check in db
+            // do a like comparison
+            $categories = $categories->where('name', 'like', '%' . request()->get('search', '') . '%');
+        }
         //
-        $categories = PetCategory::orderBy('created_at', 'desc')->paginate(5);
-        // $categories = PetCategory::all();
+
         return view('pet-categories.create', compact('categories'));
     }
 

@@ -1,10 +1,10 @@
 <x-app-layout>
 
-    <section class="mt-14">
-        <div class="container mx-auto flex justify-start items-center flex-wrap">
+    <section class="mt-14 overflow-x-hidden">
+        <div class="flex justify-center items-center flex-wrap overflow-y-scroll">
             @include('shared.success_message')
             <nav id="store" class="w-full z-30 top-0 px-6 py-1">
-                <div class="w-full container mx-auto flex flex-wrap items-center justify-start mt-0 px-2 py-3">
+                <div class="w-full container mx-auto flex flex-wrap items-center justify-center mt-0 px-2 py-3">
                     <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
                         href="#">
                         Manage adoptions
@@ -15,7 +15,7 @@
             </nav>
 
             {{-- table --}}
-            <div class="p-3 overflow-auto">
+            <div class="p-4 overflow-auto">
 
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                     {{-- <div
@@ -117,7 +117,8 @@
                                 placeholder="Search for items">
                         </div>
                     </div> --}}
-                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                        id="table_manage_adoption">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
                                 <th scope="col" class="p-4">
