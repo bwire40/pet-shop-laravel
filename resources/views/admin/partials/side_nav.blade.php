@@ -1,4 +1,4 @@
-<aside class="relative bg-slate-800 h-screen w-64 hidden sm:block shadow-xl">
+<aside class="relative bg-slate-800 w-64 hidden sm:block shadow-xl overflow-y-hidden">
     <div class="p-6">
         <a href="{{ route('home') }}" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
     </div>
@@ -144,6 +144,10 @@
             Enquiry
         </a>
 
+        <a href="{{ secure_url(route('contact.index')) }}" class="flex items-center text-white py-4 pl-6 nav-item">
+            <i class="fa-solid fa-message mr-3"></i>
+            Reports
+        </a>
     </nav>
 
 </aside>
