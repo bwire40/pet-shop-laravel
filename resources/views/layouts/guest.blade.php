@@ -23,7 +23,7 @@
         <div
             class="relative overflow-hidden md:flex w-1/2 bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center hidden">
             <div>
-                <a href="/" class="text-white font-bold text-4xl font-sans">PetShop</a>
+                <a href="/" class="text-white font-bold text-4xl font-sans">PetYaMe PetShop</a>
                 <p class="text-white mt-1">The most popular pet platform you can find</p>
 
             </div>

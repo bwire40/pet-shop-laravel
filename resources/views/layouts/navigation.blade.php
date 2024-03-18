@@ -14,11 +14,11 @@
 
             {{-- links --}}
             <nav>
-                <ul class="md:flex items-center justify-between text-base text-gray-800 pt-4 md:pt-0">
+                <ul class="md:flex items-center justify-between text-base text-gray-800 pt-2 md:pt-0">
                     <li>
 
                         <a href="/"
-                            class="inline-block no-underline hover:text-black hover:underline py-2 px-4">Home</a>
+                            class="inline-block no-underline hover:text-black hover:underline py-2 px-2">Home</a>
                         {{-- <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                             {{ __('Home') }}
                         </x-nav-link> --}}
@@ -59,7 +59,7 @@
                 </svg>
 
                 {{-- @include('partials.logo_svg') --}}
-                Pet Shop
+                PetYaMe Pet Shop
             </a>
         </div>
 
