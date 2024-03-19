@@ -131,7 +131,7 @@ class AdorptionController extends Controller
         // $adorption_status = "approved";
         $adorption->update($validated);
 
-        return redirect()->route('adorption.index')->with('success', 'Successfully approved the Application!');
+        return redirect()->route('adorption.index')->with('success', 'Application status updated successfully!');
     }
 
     /**
