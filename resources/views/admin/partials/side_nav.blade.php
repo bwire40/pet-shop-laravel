@@ -60,14 +60,7 @@
                         Manage Pets
                     </a>
                 </li>
-                <li>
-                    <a href="{{ secure_url(route('adorption.index')) }}"
-                        class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                        {{-- <i class="fas fa-sticky-note mr-3"></i> --}}
-                        <i class="fa-solid fa-dog mr-2"></i>
-                        Manage Adorption
-                    </a>
-                </li>
+
             </ul>
 
         </div>
@@ -127,6 +120,21 @@
 
         </div>
 
+        <h1
+            class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item text-md
+         border-b-2 border-slate-500 mt-4">
+            Adoption Orders
+        </h1>
+        <ul>
+            <li>
+                <a href="{{ secure_url(route('adorption.index')) }}"
+                    class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                    {{-- <i class="fas fa-sticky-note mr-3"></i> --}}
+                    <i class="fa-solid fa-dog mr-2"></i>
+                    Manage Adorption
+                </a>
+            </li>
+        </ul>
         {{-- Users --}}
         {{-- section --}}
         <h1
@@ -144,10 +152,10 @@
             Enquiry
         </a>
 
-        <a href="{{ secure_url(route('invoices.index')) }}" class="flex items-center text-white py-4 pl-6 nav-item">
-            <i class="fa-solid fa-message mr-3"></i>
-            Invoice
-        </a>
+        {{-- <a href="{{ secure_url(route('invoices.index')) }}" class="flex items-center text-white py-4 pl-6 nav-item">
+                <i class="fa-solid fa-message mr-3"></i>
+                Invoice
+            </a> --}}
     </nav>
 
 </aside>

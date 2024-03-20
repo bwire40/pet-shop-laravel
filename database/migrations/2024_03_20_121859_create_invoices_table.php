@@ -8,6 +8,22 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     * business name
+     * address
+     * phone
+     * email
+     * logo
+     *
+     * customer name
+     * address
+     * phone
+     * email
+     *
+     * item
+     * descriptiom
+     * qty
+     * unit price
+     * total
      */
     public function up(): void
     {

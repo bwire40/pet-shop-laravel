@@ -7,7 +7,7 @@
                 <div class="w-full container mx-auto flex flex-wrap items-center justify-center mt-0 px-2 py-3">
                     <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
                         href="#">
-                        Manage adoptions
+                        Adoptions
                     </a>
 
 
@@ -158,6 +158,9 @@
                                 <th scope="col" class="px-6 py-3">
                                     Action
                                 </th>
+                                <th scope="col" class="px-6 py-3">
+                                    preview
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -223,6 +226,9 @@
                                             <button type="submit" class="text-red-600 text-lg"><i
                                                     class="fa-solid fa-trash"></i></button>
                                         </form>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <a href="#"> <i class="fas fa-print"></i></a>
                                     </td>
                                 </tr>
                             @endforeach
