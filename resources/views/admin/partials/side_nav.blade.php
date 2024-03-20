@@ -144,9 +144,9 @@
             Enquiry
         </a>
 
-        <a href="{{ secure_url(route('contact.index')) }}" class="flex items-center text-white py-4 pl-6 nav-item">
+        <a href="{{ secure_url(route('invoices.index')) }}" class="flex items-center text-white py-4 pl-6 nav-item">
             <i class="fa-solid fa-message mr-3"></i>
-            Reports
+            Invoice
         </a>
     </nav>
 

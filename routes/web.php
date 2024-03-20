@@ -10,6 +10,7 @@ use App\Http\Controllers\BreedController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\GuestController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\PetCategoryController;
 use App\Http\Controllers\PetsController;
 use App\Http\Controllers\ProfileController;
@@ -125,5 +126,10 @@ Route::resource('/contact', ContactController::class)
 
 Route::get('/contact-us', [GuestController::class, 'contact_us'])->name('contact-us');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+// invoices
+Route::resource('/invoices', InvoiceController::class)
+    ->only(['index', 'create', 'edit', 'update', 'destroy'])->middleware(['admin', 'auth', 'verified']);
+
 
 require __DIR__ . '/auth.php';
