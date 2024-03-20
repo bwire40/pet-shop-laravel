@@ -228,7 +228,7 @@
                                         </form>
                                     </td>
                                     <td class="px-6 py-4">
-                                        <a href="#"> <i class="fas fa-print"></i></a>
+                                        <a href="#" title="Print Order details"> <i class="fas fa-print"></i></a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -237,10 +237,6 @@
                     </table>
                 </div>
 
-                {{-- pagination --}}
-                <div class="py-3">
-                    {{ $adorptions->links() }}
-                </div>
 
 
             </div>
