@@ -131,5 +131,8 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 Route::resource('/invoices', InvoiceController::class)
     ->only(['index', 'create', 'edit', 'update', 'destroy'])->middleware(['admin', 'auth', 'verified']);
 
+// print order invoice
+Route::get('print-order-invoice/{adorption}', [AdorptionController::class, 'print_invoice_html'])->name('print_invoice');
+
 
 require __DIR__ . '/auth.php';

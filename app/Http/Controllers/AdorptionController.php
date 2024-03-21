@@ -152,4 +152,16 @@ class AdorptionController extends Controller
         $adorptions = Adorption::orderBy('created_at', 'desc')->paginate(5);
         return view('adorption.manage-adorptions', compact('adorptions'));
     }
+
+
+    // print invoice
+    public function print_invoice_html(Adorption $adorption, Request $request, Pets $pet)
+    {
+        //
+        // $adorption = Adorption::orderBy('created_at', 'desc');
+        $total = 0;
+        $total = $adorption->adorption_fee + $total;
+        $adorptions = Adorption::all();
+        return view('invoices.order_invoice', compact('adorption', 'total', 'adorptions'));
+    }
 }
