@@ -1,130 +1,178 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<div aria-label="form" tabindex="0" class="focus:outline-none xl:w-10/12 w-full px-8">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <div class="xl:px-24">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+        <div class="mt-16 lg:flex justify-between border-b border-gray-200 pb-16">
+            <div class="w-80">
+                <div class="flex items-center">
+                    <h1 tabindex="0" class="focus:outline-none text-xl font-medium pr-2 leading-5 text-gray-800">
+                        Customer Information</h1>
+                </div>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.min.css">
-
-
-    <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-
-    <script src="https://kit.fontawesome.com/cc31d88ebe.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-
-
-    <!-- Page Content -->
-    <main class="bg-gray-100 font-family-karla flex">
-        {{-- sidenav --}}
-        @include('admin.partials.side_nav')
-
-        <div class="w-full flex flex-col h-screen overflow-y-hidden">
-
-            {{-- header --}}
-            @include('admin.partials.header')
-            {{ $slot }}
+            </div>
+            <div>
+                <div class="md:flex items-center lg:ml-24 lg:mt-0 mt-4">
+                    <div class="md:w-64">
+                        <label class="text-sm leading-none text-gray-800" id="firstName">Full name</label>
+                        <p class="font-sm">{{ $adorption->username }}</p>
+                    </div>
+                    <div class="md:w-64 md:ml-12 md:mt-0 mt-4">
+                        <label class="text-sm leading-none text-gray-800" id="lastName">Email</label>
+                        <p>{{ $adorption->email }}</p>
+                    </div>
+                </div>
+                <div class="md:flex items-center lg:ml-24 mt-8">
+                    <div class="md:w-64">
+                        <label class="text-sm leading-none text-gray-800" id="emailAddress">Address</label>
+                        <p>{{ $adorption->address }}</p>
+                    </div>
+                    <div class="md:w-64 md:ml-12 md:mt-0 mt-4">
+                        <label class="text-sm leading-none text-gray-800" id="phone">Phone number</label>
+                        <p>{{ $adorption->number }}</p>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="mt-16 lg:flex justify-between border-b border-gray-200 pb-16 mb-4">
+            <div class="w-80">
+                <div class="flex items-center">
+                    <h1 tabindex="0" class="focus:outline-none text-xl font-medium pr-2 leading-5 text-gray-800">
+                        Pet Details</h1>
+                </div>
 
+            </div>
+            <div>
+                <div class="md:flex items-center lg:ml-24 lg:mt-0 mt-4">
+                    <div class="md:w-64">
+                        <label class="text-sm leading-none text-gray-800" id="firstName">Pet name</label>
+                        <p class="font-sm">{{ $adorption->petname }}</p>
+                    </div>
+                    <div class="md:w-64 md:ml-12 md:mt-0 mt-4">
+                        <label class="text-sm leading-none text-gray-800" id="lastName">Category</label>
+                        <p>{{ $adorption->category }}</p>
+                    </div>
+                </div>
+                <div class="md:flex items-center lg:ml-24 mt-8">
+                    <div class="md:w-64">
+                        <label class="text-sm leading-none text-gray-800" id="emailAddress">Color</label>
+                        <p>{{ $adorption->color }}</p>
+                    </div>
+                    <div class="md:w-64 md:ml-12 md:mt-0 mt-4">
+                        <label class="text-sm leading-none text-gray-800" id="phone">Age</label>
+                        <p>{{ $adorption->age }}</p>
+                    </div>
+                </div>
+                <div class="md:flex items-center lg:ml-24 mt-8">
+
+                    <div class="md:w-64 md:ml-12 md:mt-0 mt-4">
+                        <label class="text-sm leading-none text-gray-800" id="phone">Weight</label>
+                        <p>{{ $adorption->weight }}</p>
+                    </div>
+                </div>
+                <div class="md:flex items-center lg:ml-24 mt-8">
+                    <div class="md:w-64">
+                        <label class="text-sm leading-none text-gray-800" id="emailAddress">Breed</label>
+                        <p>{{ $adorption->breed }}</p>
+                    </div>
+                    <div class="md:w-64 md:ml-12 md:mt-0 mt-4">
+                        <label class="text-sm leading-none text-gray-800" id="phone">Description</label>
+                        <p>{{ $adorption->description }}</p>
+                    </div>
+                </div>
+                <div class="md:flex items-center lg:ml-24 mt-8">
+                    <div class="md:w-64">
+                        <label class="text-sm leading-none text-gray-800" id="emailAddress">Adoption Fee</label>
+                        <p>{{ $adorption->adorption_fee }}</p>
+                    </div>
+                    <div class="md:w-64 md:ml-12 md:mt-0 mt-4">
+                        <label class="text-sm leading-none text-gray-800" id="phone">Experince with Pets?</label>
+                        <p>{{ $adorption->experience }}</p>
+                    </div>
+                </div>
+
+                <div class="md:flex items-center lg:ml-24 mt-8">
+                    <div class="md:w-64">
+                        <label class="text-sm leading-none text-gray-800" id="emailAddress">Has any pets?</label>
+                        <p>{{ $adorption->pets }}</p>
+                    </div>
+                    <div class="md:w-64 md:ml-12 md:mt-0 mt-4">
+                        <label class="text-sm leading-none text-gray-800" id="phone">Vetenary</label>
+                        <p>{{ $adorption->vetenary }}</p>
+                    </div>
+                </div>
+                <div class="md:flex items-center lg:ml-24 mt-8">
+                    <div class="md:w-64">
+                        <label class="text-sm leading-none text-gray-800" id="emailAddress">House Type</label>
+                        <p>{{ $adorption->house_type }}</p>
+                    </div>
+                    <div class="md:w-64 md:ml-12 md:mt-0 mt-4">
+                        <label class="text-sm leading-none text-gray-800" id="phone">House Ownership</label>
+                        <p>{{ $adorption->house_ownership }}</p>
+                    </div>
+                </div>
+                <div class="md:flex items-center lg:ml-24 mt-8">
+                    <div class="md:w-64">
+                        <label class="text-sm leading-none text-gray-800" id="emailAddress">Household Agreement:</label>
+                        <p>{{ $adorption->house_agreement }}</p>
+                    </div>
+                    <div class="md:w-64 md:ml-12 md:mt-0 mt-4">
+                        <label class="text-sm leading-none text-gray-800" id="phone">Allergies:</label>
+                        <p>{{ $adorption->allergies }}</p>
+                    </div>
+                </div>
+                <div class="md:flex items-center lg:ml-24 mt-8">
+                    <div class="md:w-64">
+                        <label class="text-sm leading-none text-gray-800" id="emailAddress">Training Type:</label>
+                        <p>{{ $adorption->training_type }}</p>
+                    </div>
+                    <div class="md:w-64 md:ml-12 md:mt-0 mt-4">
+                        <label class="text-sm leading-none text-gray-800" id="phone">Willing to Care for the
+                            pet?</label>
+                        <p>{{ $adorption->care }}</p>
+                    </div>
+                </div>
+                <div class="md:flex items-center lg:ml-24 mt-8">
+                    <div class="md:w-64">
+                        <label class="text-sm leading-none text-gray-800" id="emailAddress">Willing to send in follow
+                            up reports?</label>
+                        <p>{{ $adorption->followup }}</p>
+                    </div>
+                    <div class="md:w-64 md:ml-12 md:mt-0 mt-4">
+                        <label class="text-sm leading-none text-gray-800" id="phone">Accepts Our Terms and
+                            Conditions?<label>
+                                <p>{{ $adorption->terms }}</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-center items-center py-10 w-full">
+
+                    <form action="{{ route('adorption.update', $adorption->id) }}" method="post">
+                        @csrf
+                        @method('put')
+
+                        <label for="adorption_status"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an
+                            option</label>
+                        <select id="adorption_status" name="adorption_status"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+                             focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+                              dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                               dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected>Approve or Reject Application</option>
+                            <option value="approved">Approve</option>
+                            <option value="rejected">Reject</option>
+                        </select>
+                        @error('adorption_status')
+                            <p class="text-red-500">{{ $message }}</p>
+                        @enderror
+
+                        <button type="submit"
+                            class="flex items-center justify-center w-full mt-4 p-4 text-yellow-500 border border-yellow-500 rounded-md dark:text-gray-200 dark:border-yellow-600 hover:bg-yellow-600 hover:border-yellow-600 hover:text-gray-100 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:hover:border-yellow-700 dark:hover:text-gray-300">
+                            Update
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </main>
-
-
-    <!-- Font Awesome -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
-        integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
-    <!-- ChartJS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
-        integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/2.0.2/js/dataTables.min.js"></script>
-
-    <script>
-        var chartOne = document.getElementById('chartOne');
-        var myChart = new Chart(chartOne, {
-            type: 'bar',
-            data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-        });
-
-        var chartTwo = document.getElementById('chartTwo');
-        var myLineChart = new Chart(chartTwo, {
-            type: 'line',
-            data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-        });
-    </script>
-</body>
-
-</html>
+    </div>
+</div>
