@@ -227,10 +227,17 @@
                                                     class="fa-solid fa-trash"></i></button>
                                         </form>
                                     </td>
-                                    <td class="px-6 py-4">
-                                        <a href="{{ route('print_invoice', $adorption) }}" title="Print Order details">
-                                            <i class="fas fa-print"></i></a>
-                                    </td>
+                                    @if ($adorption->adorption_status != 'approved')
+                                        <td class="px-6 py-4">
+                                            <h1 class="text-sm italic font-bold">Approve first to download invoice</h1>
+                                        </td>
+                                    @else
+                                        <td class="px-6 py-4">
+                                            <a target="blank" href="{{ route('print_invoice', $adorption) }}"
+                                                title="Print Order details">
+                                                <i class="fas fa-print"></i></a>
+                                        </td>
+                                    @endif
                                 </tr>
                             @endforeach
 
