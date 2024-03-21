@@ -102,7 +102,9 @@ Route::get('/adopt', [AdorptionController::class, 'adopt'])->name('adopt');
 
 Route::get('/manage-adorptions', [AdorptionController::class, 'manage_adorptions'])
     ->name('manage-adorptions')->middleware(['auth', 'verified']);
-
+// preview adorption
+Route::get('/preview-adortion/{adorption}', [AdorptionController::class, 'preview_adorption'])
+    ->name('preview-adorptions')->middleware(['auth', 'verified']);
 
 Route::get('/adorpt/{pet}', [PetsController::class, 'adorpt_form'])
     ->name('adorpt-pet')
@@ -132,7 +134,9 @@ Route::resource('/invoices', InvoiceController::class)
     ->only(['index', 'create', 'edit', 'update', 'destroy'])->middleware(['admin', 'auth', 'verified']);
 
 // print order invoice
-Route::get('print-order-invoice/{adorption}', [AdorptionController::class, 'print_invoice_html'])->name('print_invoice');
+Route::get('print-order-invoice/{adorption}', [AdorptionController::class, 'print_invoice_html'])
+    ->name('print_invoice')
+    ->middleware(['admin', 'auth', 'verified']);
 
 
 require __DIR__ . '/auth.php';

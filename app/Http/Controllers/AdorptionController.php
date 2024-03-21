@@ -153,6 +153,12 @@ class AdorptionController extends Controller
         return view('adorption.manage-adorptions', compact('adorptions'));
     }
 
+    public function preview_adorption(Adorption $adorption, Request $request, Pets $pet)
+    {
+        //
+        return view('invoices.customer_preview', compact('adorption'));
+    }
+
 
     // print invoice
     public function print_invoice_html(Adorption $adorption, Request $request, Pets $pet)
