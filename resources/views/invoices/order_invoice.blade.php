@@ -23,7 +23,7 @@
 
 <body>
 
-    <div class="bg-white rounded-lg shadow-lg px-8 py-10 max-w-xl mx-auto">
+    <div class="bg-white rounded-lg shadow-lg px-8 py-10 max-w-3xl mx-auto">
         <div class="flex items-center justify-between mb-8">
             <div class="flex items-center">
                 <img class="h-8 w-8 mr-2" src="https://tailwindflex.com/public/images/logos/favicon-32x32.png"
