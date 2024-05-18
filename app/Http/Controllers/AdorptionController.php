@@ -148,8 +148,12 @@ class AdorptionController extends Controller
 
     public function manage_adorptions(Request $request, Adorption $adorption)
     {
+        $user=$request->user();
 
-        $adorptions = Adorption::orderBy('created_at', 'desc')->paginate(5);
+        if($user){
+
+            $adorptions = Adorption::orderBy('created_at', 'desc')->paginate(5);
+        }
         return view('adorption.manage-adorptions', compact('adorptions'));
     }
 
