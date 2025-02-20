@@ -32,7 +32,7 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => 'C:\Users\Emmanuel\My Drive (mybackups.bwire@gmail.com)\project-backups',
+            'root' => 'H:\My Drive\project-backups',
             'throw' => false,
         ],
 
