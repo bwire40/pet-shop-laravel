@@ -1,7 +1,7 @@
 @extends('layouts.home')
 @section('content')
+    @include('shared.success_message')
     @include('shared.header_slides')
-
 
     @if ($pets)
         {{-- Pets Accessories --}}

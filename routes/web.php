@@ -32,7 +32,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', [GuestController::class, 'welcome']);
+Route::get('/', [GuestController::class, 'welcome'])->name('welcome');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
